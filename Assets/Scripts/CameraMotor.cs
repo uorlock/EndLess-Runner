@@ -7,11 +7,11 @@ public class CameraMotor : MonoBehaviour
 
     private float transition = 0.0f;
     private float animationDuration = 2.0f;
-
-    private Vector3 startOffset;
     private Vector3 moveVector;
     private Vector3 animationOffset = new Vector3(0, 5, 5);
 
+
+    private Vector3 startOffset;
     private Transform lookAt;
 
 
@@ -42,5 +42,7 @@ public class CameraMotor : MonoBehaviour
             transition += Time.deltaTime * 1 / animationDuration;
             transform.LookAt(lookAt.position + Vector3.up);
         }
+
+        //transform.position = lookAt.position + startOffset;
     }
 }
